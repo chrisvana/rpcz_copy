@@ -1,15 +1,11 @@
 // RPCZ
 [
-{ "config": {
-    "component": "rpcz",
-    "component_root": "src/rpcz"
-} },
 { "proto_library": {
     "name": "rpcz_proto",
     "sources": [ "src/rpcz/proto/*.proto" ],
-    "dependencies" : [ "../protobuf:proto" ]
+    "generate_cc": true
 } },
-{ "cc_binary": {
+{ "cc_library": {
     "name": "rpcz",
     "cc_headers": [ "src/rpcz/*.hpp" ],
     "cc_sources": [ "src/rpcz/*.cc" ],
@@ -20,6 +16,7 @@
                       "../boost:thread",
                       "../protobuf:protoc_lib"
     ],
-    "cc_compile_args": [ "-Wno-error=unused-private-field" ]
+    "include_dirs": [ "src" ],
+    "clang": { "cc_compile_args": [ "-Wno-error=unused-private-field" ] }
 } }
 ]
