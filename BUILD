@@ -16,7 +16,7 @@
                       "../boost:thread",
                       "../protobuf:protoc_lib"
     ],
-    "include_dirs": [ "src" ],
+    "cc_include_dirs": [ "src" ],
     "clang": { "cc_compile_args": [ "-Wno-error=unused-private-field" ] }
 } }
 ]
