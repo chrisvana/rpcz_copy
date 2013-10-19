@@ -3,7 +3,8 @@
 { "proto_library": {
     "name": "rpcz_proto",
     "sources": [ "src/rpcz/proto/*.proto" ],
-    "generate_cc": true
+    "generate_cc": true,
+    "licenses": [ "http://opensource.org/licenses/Apache-2.0" ]
 } },
 { "cc_library": {
     "name": "rpcz",
@@ -17,6 +18,7 @@
                       "../protobuf:protoc_lib"
     ],
     "cc_include_dirs": [ "src" ],
-    "clang": { "cc_compile_args": [ "-Wno-error=unused-private-field" ] }
+    "clang": { "cc_compile_args": [ "-Wno-error=unused-private-field" ] },
+    "licenses": [ "http://opensource.org/licenses/Apache-2.0" ]
 } }
 ]
