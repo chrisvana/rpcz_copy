@@ -11,11 +11,11 @@
     "cc_headers": [ "src/rpcz/*.hpp" ],
     "cc_sources": [ "src/rpcz/*.cc" ],
     "dependencies": [ ":rpcz_proto",
-                      "../zeromq:zeromq",
-                      "../boost:system",
-                      "../boost:program_options",
-                      "../boost:thread",
-                      "../protobuf:protoc_lib"
+                      "//third_party/zeromq:zeromq",
+                      "//third_party/boost:system",
+                      "//third_party/boost:program_options",
+                      "//third_party/boost:thread",
+                      "//third_party/protobuf:protoc_lib"
     ],
     "cc_include_dirs": [ "src" ],
     "clang": { "cc_compile_args": [ "-Wno-error=unused-private-field" ] },
