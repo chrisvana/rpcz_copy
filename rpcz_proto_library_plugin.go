@@ -26,13 +26,13 @@ func main() {
   if node["name"] == nil {
     log.Fatal("Require component Name.")
   }
-  if node["generate_java"] ! = nil {
+  if node["generate_java"] != nil {
     log.Fatal("rpcz does not support java.")
   }
-  if node["generate_go"] ! = nil {
+  if node["generate_go"] != nil {
     log.Fatal("rpcz does not support go.")
   }
-  if node["generate_py"] ! = nil {
+  if node["generate_py"] != nil {
     log.Fatal("rpcz supports python, but rpcz_proto_library_plugin does not.")
   }
 
